@@ -1,0 +1,65 @@
+{
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "outputDirectory": "dist"
+      }
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/perpustakaan",
+      "destination": "https://sites.google.com/guru.smp.belajar.id/perpustakaanesashaka/home",
+      "permanent": true
+    },
+    {
+      "source": "/pupukama",
+      "destination": "https://pupuk-ama.vercel.app/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://school-be-xi.vercel.app/api/:path*"
+    },
+    {
+      "source": "/profil",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/akademik",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/ekstrakurikuler",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/fasilitas",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/berita",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/elearning",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/admin/:path*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/article/:path*",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/((?!api|perpustakaan).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
